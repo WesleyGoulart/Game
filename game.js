@@ -63,8 +63,12 @@ if (comando == 'l') { // TODO avisar morte
     vida = vida - 1
 }
 
-if (comando == 'c') { // TODO não pode passar de 10 de vida
-    vida = vida + 1
+if (comando == 'c') {
+    if(vida == 10) {
+        console.log('Vida cheia')
+    } else {
+        vida = vida + 1
+    }
 }
 
 if (comando == 'r') {
