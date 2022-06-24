@@ -3,6 +3,7 @@ const porta = require('./porta')
 const trapdoor = require('./trapdoor')
 const vida = require('./vida')
 const inventario = require('./inventario')
+const sorteios = require('./sorteios')
 
 
 function selecionaComando(comando) {
@@ -33,6 +34,11 @@ function selecionaComando(comando) {
 
     if (comando == 'i') {
         inventario.getInventario()
+    }
+    
+    if(sorteios.getRandom() < 0.1) {
+        vida.tomaDano()
+        console.log('Você apanhou!')
     }
 
 }

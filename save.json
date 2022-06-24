@@ -1,0 +1,12 @@
+{
+    "vida": 10,
+    "durabilidade_espada": 10,
+    "porta": "Aberta",
+    "trapdoor": "Aberta",
+    "inventario": {
+        "comida": 2,
+        "sucata": 0,
+        "ferro": 2,
+        "madeira": 0
+    }
+}

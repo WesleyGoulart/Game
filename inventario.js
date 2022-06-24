@@ -7,6 +7,7 @@ const inventario = {
 
 function getInventario () {
     console.log(inventario)
+    return inventario
 }
 
 function tiraComida () {
