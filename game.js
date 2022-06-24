@@ -4,19 +4,20 @@ const prompt = promptSync()
 const comandos = require ('./comandos')
 const porta = require ('./porta')
 const vida = require ('./vida')
+const trapdoor = require ('./trapdoor')
+const espada = require ('./espada')
 
 let comando
 
-let espada = 10
-let trapdoor = true
+
 let repetidor = 0
 
 function status() {
     console.log('Vida:', vida.getVida())
     // TODO Corrigir os textos para apresentar ao usuário
-    console.log(espada)
+    console.log(espada.getEspada())
     console.log(porta.getPorta())
-    console.log(trapdoor)
+    console.log(trapdoor.getTrapdoor())
     console.log(repetidor)
 }
 

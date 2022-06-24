@@ -1,7 +1,12 @@
 let vida = 10
 
 function tomaDano() {
-    vida = vida - 1
+    if (vida > 0) {
+        vida = vida - 1
+    } 
+    if (vida == 0) {
+        console.log("Você morreu!")
+    }
 }
 
 function come() {
