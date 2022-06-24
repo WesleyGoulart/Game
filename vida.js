@@ -2,6 +2,10 @@ const inventario = require('./inventario')
 
 let vida = 10
 
+function vidaInicial(vidaSalva){
+    vida = vidaSalva
+}
+
 function tomaDano() {
     if (vida > 0) {
         vida = vida - 1
@@ -29,5 +33,6 @@ function getVida(){
 module.exports = {
     tomaDano,
     come,
-    getVida
+    getVida,
+    vidaInicial
 }

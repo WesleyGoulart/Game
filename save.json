@@ -1,6 +1,6 @@
 {
-    "vida": 10,
-    "durabilidade_espada": 10,
+    "vida": 6,
+    "durabilidade_espada": 9,
     "porta": "Aberta",
     "trapdoor": "Aberta",
     "inventario": {

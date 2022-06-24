@@ -2,6 +2,7 @@ const promptSync = require('prompt-sync')
 const prompt = promptSync()
 const fs = require('fs');
 const inventario = require('./inventario')
+const save = require('./save.json')
 
 const comandos = require ('./comandos')
 const porta = require ('./porta')
@@ -11,10 +12,13 @@ const espada = require ('./espada')
 
 let comando
 
+console.log(save.inventario)
+
+vida.vidaInicial(save.vida)
+
 
 function status() {
     console.log('Vida:', vida.getVida())
-    // TODO Corrigir os textos para apresentar ao usuário
     console.log('Durabilidade da Espada:', espada.getEspada())
     console.log('A porta está', porta.getPorta())
     console.log('A trapdoor está', trapdoor.getTrapdoor())
