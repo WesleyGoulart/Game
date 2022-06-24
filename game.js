@@ -31,6 +31,6 @@ console.log('==================================================')
 
 comandos.selecionaComando(comando)
 
-status()
+status() //TODO arrumar o status ao sair
 
 }

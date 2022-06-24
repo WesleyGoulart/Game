@@ -1,3 +1,5 @@
+const inventario = require('./inventario')
+
 let espada = 10
 
 
@@ -15,7 +17,9 @@ function arrumaEspada() {
     } else if (espada == 9) {
         console.log('Sua espada não pode ser arrumada')
     } else {    
-    espada = espada + 2
+        if (inventario.tiraFerro() == true) {
+            espada = espada + 2
+        }
     }
 }
 

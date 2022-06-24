@@ -1,7 +1,7 @@
 const inventario = {
-    comida: 0,
+    comida: 2,
     sucata: 0,
-    ferro: 0,
+    ferro: 2,
     madeira: 0
 }
 
@@ -19,9 +19,20 @@ function tiraComida () {
     }
 }
 
+function tiraFerro () {
+    if (inventario.ferro == 0) {
+        console.log('Você não tem ferro!')
+        return false
+    } else {
+        inventario.ferro = inventario.ferro - 1
+        return true
+    }
+}
+
 module.exports = {
     getInventario,
-    tiraComida
+    tiraComida,
+    tiraFerro
 }
 
 
