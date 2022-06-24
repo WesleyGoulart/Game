@@ -21,10 +21,13 @@ function status() {
 status()
 
 function comandos() {
+    // TODO Aleatorizar se um zumbi aparece
+    // TODO Aleatorizar se o zumbi dá um hit (miss)
+    // TODO Aleatorizar se você consegue dar um hit (miss). QUanto maior o treino, menos miss e mais dano
     //TODO mostrar comando quando pedido
     console.log('Interagir com a porta (p)')
     console.log('Interagir com a trapdoor (t)')
-    console.log('Bater num monstro (a)') 
+    console.log('Bater num zumbi (a)') 
     console.log('Tomar um hit (l)')
     console.log('Comer (c)')
     console.log('Repetidor (r)')
