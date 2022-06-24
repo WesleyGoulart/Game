@@ -9,7 +9,11 @@ function abreFechaPorta () {
 }
 
 function getPorta(){
-    return porta
+    if (porta == true) {
+        return 'Aberta'
+    }
+    return 'Fechada'
+
 }
 
 module.exports = {

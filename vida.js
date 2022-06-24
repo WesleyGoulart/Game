@@ -1,3 +1,5 @@
+const inventario = require('./inventario')
+
 let vida = 10
 
 function tomaDano() {
@@ -13,9 +15,13 @@ function come() {
     if(vida == 10) {
         console.log('Vida cheia')
     } else {
-        vida = vida + 1
+        const podeComer = inventario.tiraComida()
+        if (podeComer == true) {
+            vida = vida + 1
+        }
     }
 }
+
 function getVida(){
     return vida
 }

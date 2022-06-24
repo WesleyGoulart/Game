@@ -15,10 +15,9 @@ let repetidor = 0
 function status() {
     console.log('Vida:', vida.getVida())
     // TODO Corrigir os textos para apresentar ao usuário
-    console.log(espada.getEspada())
-    console.log(porta.getPorta())
-    console.log(trapdoor.getTrapdoor())
-    console.log(repetidor)
+    console.log('Durabilidade da Espada:', espada.getEspada())
+    console.log('A porta está', porta.getPorta())
+    console.log('A trapdoor está', trapdoor.getTrapdoor())
 }
 
 status()

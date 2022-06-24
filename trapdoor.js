@@ -9,7 +9,10 @@ function abreFechaTrapdoor () {
 }
 
 function getTrapdoor(){
-    return trapdoor
+    if (trapdoor == true) {
+        return 'Aberta'
+    }
+    return 'Fechada'
 }
 
 module.exports = {

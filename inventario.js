@@ -9,8 +9,19 @@ function getInventario () {
     console.log(inventario)
 }
 
+function tiraComida () {
+    if (inventario.comida == 0) {
+        console.log('Você não tem comida!')
+        return false
+    } else {
+        inventario.comida = inventario.comida - 1
+        return true
+    }
+}
+
 module.exports = {
-    getInventario
+    getInventario,
+    tiraComida
 }
 
 
