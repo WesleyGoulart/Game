@@ -2,7 +2,6 @@ const promptSync = require('prompt-sync')
 const prompt = promptSync()
 let comando
 
-// TODO Carregar um save
 let vida = 10
 let espada = 10
 let porta = true // true = aberto
@@ -21,10 +20,6 @@ function status() {
 status()
 
 function comandos() {
-    // TODO Aleatorizar se um zumbi aparece
-    // TODO Aleatorizar se o zumbi dá um hit (miss)
-    // TODO Aleatorizar se você consegue dar um hit (miss). QUanto maior o treino, menos miss e mais dano
-    //TODO mostrar comando quando pedido
     console.log('Interagir com a porta (p)')
     console.log('Interagir com a trapdoor (t)')
     console.log('Bater num zumbi (a)')
@@ -32,7 +27,7 @@ function comandos() {
     console.log('Tomar um hit (l)')
     console.log('Comer (c)')
     console.log('Repetidor (r)')
-    console.log('Sair (ç)') // TODO salvar o estado do jogo
+    console.log('Sair (ç)')
 }
 
 while (comando != 'ç') {
@@ -74,7 +69,7 @@ if (comando == 'h') {
     }
 }
 
-if (comando == 'l') { // TODO avisar morte
+if (comando == 'l') {
     vida = vida - 1
 }
 
