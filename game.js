@@ -27,7 +27,8 @@ function comandos() {
     //TODO mostrar comando quando pedido
     console.log('Interagir com a porta (p)')
     console.log('Interagir com a trapdoor (t)')
-    console.log('Bater num zumbi (a)') 
+    console.log('Bater num zumbi (a)')
+    console.log('Arrumar a espada (h)') 
     console.log('Tomar um hit (l)')
     console.log('Comer (c)')
     console.log('Repetidor (r)')
@@ -62,6 +63,17 @@ if (comando == 'a') {
         espada = espada - 1
     }
 }
+
+if (comando == 'h') {
+    if (espada == 10) {
+        console.log('Sua espada está arrumada')
+    } else if (espada == 9) {
+        console.log('Sua espada não pode ser arrumada')
+    } else {    
+    espada = espada + 2
+    }
+}
+
 if (comando == 'l') { // TODO avisar morte
     vida = vida - 1
 }
