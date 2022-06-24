@@ -55,10 +55,13 @@ if (comando == 't') {
     }
 }
 
-if (comando == 'a') { // TODO espada tem que acabar
-    espada = espada - 1
+if (comando == 'a') {
+    if (espada == 0) {
+        console.log('Sua espada quebrou')
+    } else {
+        espada = espada - 1
+    }
 }
-
 if (comando == 'l') { // TODO avisar morte
     vida = vida - 1
 }
