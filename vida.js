@@ -26,13 +26,18 @@ function come() {
     }
 }
 
-function getVida(){
+function getVida() {
     return vida
+}
+
+function resetVida() {
+    vida = 10
 }
 
 module.exports = {
     tomaDano,
     come,
     getVida,
-    vidaInicial
+    vidaInicial,
+    resetVida
 }

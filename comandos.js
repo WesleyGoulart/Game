@@ -25,6 +25,12 @@ function selecionaComando(comando) {
     if (comando == 'i') {
         inventario.getInventario()
     }
+
+    if (comando == '.') {
+        espada.resetEspada()
+        vida.resetVida()
+        inventario.resetInventario()
+    }
     
     if(sorteios.getRandom() < 0.1) {
         vida.tomaDano()
@@ -40,6 +46,7 @@ function comandos() {
     console.log('Tomar um hit (l)')
     console.log('Comer (c)')
     console.log('Repetidor (r)')
+    console.log('Resetar game (.)')
     console.log('Sair (*)')
 }
 

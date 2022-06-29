@@ -27,8 +27,13 @@ function getEspada(){
     return espada
 }
 
+function resetEspada(){
+    espada = 10 
+}
+
 module.exports = {
     quebraEspada,
     arrumaEspada,
-    getEspada
+    getEspada,
+    resetEspada
 }

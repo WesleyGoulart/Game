@@ -30,10 +30,18 @@ function tiraFerro () {
     }
 }
 
+function resetInventario(){
+    inventario.comida = 2
+    inventario.sucata = 0
+    inventario.ferro = 2
+    inventario.madeira = 0
+}
+
 module.exports = {
     getInventario,
     tiraComida,
-    tiraFerro
+    tiraFerro,
+    resetInventario
 }
 
 
