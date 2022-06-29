@@ -5,9 +5,13 @@ const inventario = {
     madeira: 0
 }
 
-function getInventario () {
-    console.log(inventario)
+function getInventario (imprimir) {
+    if (imprimir == true) {
+        console.log(inventario)
+    }    
+    
     return inventario
+    
 }
 
 function tiraComida () {

@@ -2,7 +2,7 @@ const espada = require('./espada')
 const vida = require('./vida')
 const inventario = require('./inventario')
 const sorteios = require('./sorteios')
-
+const opcoes = require ('./opcoes')
 
 function selecionaComando(comando) {
 
@@ -23,7 +23,11 @@ function selecionaComando(comando) {
     }
 
     if (comando == 'i') {
-        inventario.getInventario()
+        inventario.getInventario(true)
+    }
+
+    if (comando == 'm') {
+        opcoes.getOpcoes()
     }
 
     if (comando == '.') {
@@ -46,8 +50,7 @@ function comandos() {
     console.log('Tomar um hit (l)')
     console.log('Comer (c)')
     console.log('Repetidor (r)')
-    console.log('Resetar game (.)')
-    console.log('Sair (*)')
+    console.log('Opcoes (m)')
 }
 
 module.exports = {

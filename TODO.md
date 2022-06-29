@@ -9,4 +9,3 @@
 // TODO Ao morrer, apagar o save.json - HARDCORE!
 // TODO Fazer funcionar sem um save. OOOOOOU sempre tem um save default
 // TODO Trazer mais eventos
-// TODO Fazer um reset
