@@ -15,7 +15,7 @@ vida.vidaInicial(save.vida)
 
 
 function status(imprimir) {
-    if (status == true) {
+    if (imprimir == true) {
         console.log('Vida:', vida.getVida())
         console.log('Durabilidade da Espada:', espada.getEspada())
     }
