@@ -1,1 +1,1 @@
-{"vida":10,"durabilidade_espada":10,"porta":"Aberta","trapdoor":"Aberta"}
+{"vida":10,"durabilidade_espada":10}
