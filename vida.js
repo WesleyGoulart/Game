@@ -1,4 +1,5 @@
-const inventario = require('./inventario')
+const inventario = require ('./inventario')
+
 
 let vida = 10
 

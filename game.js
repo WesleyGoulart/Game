@@ -8,44 +8,43 @@ const comandos = require ('./comandos')
 const vida = require ('./vida')
 const espada = require ('./espada')
 const opcoes = require ('./opcoes')
+const andar = require ('./andar')
+const combate = require ('./combate');
+const status = require ('./status')
 
 let comando
+let modoJogo = 'caminhando'
 
 vida.vidaInicial(save.vida)
 
 
-function status(imprimir) {
-    if (imprimir == true) {
-        console.log('Vida:', vida.getVida())
-        console.log('Durabilidade da Espada:', espada.getEspada())
-    }
-
-    const saveInfo = {
-        vida: vida.getVida(),
-        durabilidade_espada: espada.getEspada(),
-        inventario: inventario.getInventario(false)
-    }
-    return saveInfo
-
-}
-
-status(true)
-
-
+status.status(true)
 
 while (comando != '*') {
     if (comando != 'm' && comando != '*') {
-        comandos.comandos()
+        if (modoJogo == 'caminhando') {
+            comandos.comandos()
+        }
     }
     comando = prompt("O que você deseja fazer? ");
     console.log('==================================================')
     
-    comandos.selecionaComando(comando)
+    modoJogo = comandos.selecionaComando(comando)
+    if (modoJogo == 'caminhando') {
 
-    if (comando != '*' && comando != 'm'){
-        status(true)
+        if (comando != '*' && comando != 'm'){
+            status.status(true)
+        }
     }
-       
+
+        if (modoJogo == 'combate') {
+            status.status(true)
+            combate.getCombate ()
+            comandos.comandos ()
+            comando = prompt("O que você deseja fazer? ")
+            combate.atacarCombate(comando)
+        }
+
 }
 
 if (comando == '*'){
@@ -53,6 +52,6 @@ if (comando == '*'){
 }
 
 // A partir daqui são informações para guardar o save
-const data = status(false);
+const data = status.status(false);
 const myJSON = JSON.stringify(data, null, 4);
 fs.writeFileSync('save.json', myJSON);

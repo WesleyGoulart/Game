@@ -4,19 +4,18 @@ const inventario = require('./inventario')
 const sorteios = require('./sorteios')
 const opcoes = require ('./opcoes')
 const combate = require('./combate')
+const andar = require ('./andar')
+const game = require ('./game')
 
 function selecionaComando(comando) {
 
-    if (comando == 'a') {
-        espada.quebraEspada()
+
+    if (comando == 'z') {
+        andar.getAndar()
     }
 
     if (comando == 'h') {
         espada.arrumaEspada()
-    }
-
-    if (comando == 'l') {
-        vida.tomaDano()
     }
 
     if (comando == 'c') {
@@ -38,15 +37,17 @@ function selecionaComando(comando) {
     }
     
     if (sorteios.getRandom() < 0.1) {
-        combate.getCombate()
         console.log('Você encontrou um zumbi!')
+        return 'combate'
     }
+
+return 'caminhando'
 
 }
 
 function comandos() {
+    console.log('Andar (z)')
     console.log('Inventário (i)')
-    console.log('Bater num zumbi (a)')
     console.log('Arrumar a espada (h)') 
     console.log('Tomar um hit (l)')
     console.log('Comer (c)')

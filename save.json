@@ -1,6 +1,6 @@
 {
     "vida": 10,
-    "durabilidade_espada": 0,
+    "durabilidade_espada": 5,
     "inventario": {
         "comida": 2,
         "sucata": 0,
