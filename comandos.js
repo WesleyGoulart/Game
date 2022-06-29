@@ -36,7 +36,7 @@ function selecionaComando(comando) {
         inventario.resetInventario()
     }
     
-    if (sorteios.getRandom() < 0.1) {
+    if (sorteios.getRandom() < 0.5) {
         console.log('Você encontrou um zumbi!')
         return 'combate'
     }

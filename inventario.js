@@ -1,3 +1,6 @@
+const sorteios = require ('./sorteios')
+
+
 const inventario = {
     comida: 2,
     sucata: 0,
@@ -12,6 +15,55 @@ function getInventario (imprimir) {
     
     return inventario
     
+}
+
+function ganhaComida () {
+    
+    let sorteioDrop = Math.floor(sorteios.getRandom () * 100)
+    let ganhoComida
+
+    if (sorteioDrop <= 59 ) {
+        ganhoComida = 1
+    }
+    
+    if ( 60 <= sorteioDrop && sorteioDrop <= 89) {
+        ganhoComida = 2
+    }
+    
+    if (90 <= sorteioDrop && sorteioDrop <= 100) {
+        ganhoComida = 3
+    }
+
+    inventario.comida = inventario.comida + ganhoComida
+    
+    
+    console.log ('Você ganhou', ganhoComida, 'comida(s).' )
+}
+
+
+function ganhaFerro () {
+    
+    let sorteioDrop = Math.floor(sorteios.getRandom () * 100)
+    let ganhoFerro
+
+    
+
+    if (sorteioDrop <= 59 ) {
+        ganhoFerro = 1
+    }
+    
+    if ( 60 <= sorteioDrop && sorteioDrop <= 89) {
+        ganhoFerro = 2
+    }
+    
+    if (90 <= sorteioDrop && sorteioDrop <= 100) {
+        ganhoFerro = 3
+    }
+    
+    inventario.ferro = inventario.ferro + ganhoFerro
+    
+    console.log ('Você ganhou', ganhoFerro, 'ferro(s).' )
+
 }
 
 function tiraComida () {
@@ -45,7 +97,9 @@ module.exports = {
     getInventario,
     tiraComida,
     tiraFerro,
-    resetInventario
+    resetInventario,
+    ganhaComida,
+    ganhaFerro
 }
 
 

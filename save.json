@@ -1,10 +1,10 @@
 {
     "vida": 10,
-    "durabilidade_espada": 5,
+    "durabilidade_espada": 8,
     "inventario": {
-        "comida": 2,
+        "comida": 5,
         "sucata": 0,
-        "ferro": 2,
+        "ferro": 5,
         "madeira": 0
     }
 }

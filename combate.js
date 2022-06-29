@@ -1,14 +1,17 @@
 const promptSync = require('prompt-sync')
 const prompt = promptSync()
 
-const espada = require('./espada')
+const espada = require ('./espada')
 const sorteios = require ('./sorteios')
-const zumbi = require('./zumbi')
+const zumbi = require ('./zumbi')
 const status = require ('./status')
 const game = require ('./game')
+const vida = require ('./vida')
+
 
 function getCombate () {
-    while (zumbi.vidaTotalZumbi () > 0){ //TODO resolver o problema da vida do zumbi
+    zumbi.setVidaTotal (10)
+    while (zumbi.vidaTotalZumbi () > 0){ 
         status.status()
         console.log('Atacar (a)')
         console.log('Comer (c)')
@@ -26,6 +29,10 @@ function atacarCombate (comando) {
             console.log ('Você bateu no zumbi')
             zumbi.danoZumbi ()
             espada.quebraEspada ()
+            if (sorteios.getRandom() < 0.5) {
+                console.log ('Você apanhou!')
+                vida.tomaDano ()
+            }
             status.status (true)
             console.log('==========================================')
         }

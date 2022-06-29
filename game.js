@@ -12,6 +12,7 @@ const andar = require ('./andar')
 const combate = require ('./combate');
 const status = require ('./status')
 
+
 let comando
 let modoJogo = 'caminhando'
 
@@ -40,9 +41,8 @@ while (comando != '*') {
         if (modoJogo == 'combate') {
             status.status(true)
             combate.getCombate ()
-            comandos.comandos ()
-            comando = prompt("O que você deseja fazer? ")
             combate.atacarCombate(comando)
+            comandos.comandos ()
         }
 
 }
