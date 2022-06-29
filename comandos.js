@@ -3,6 +3,7 @@ const vida = require('./vida')
 const inventario = require('./inventario')
 const sorteios = require('./sorteios')
 const opcoes = require ('./opcoes')
+const combate = require('./combate')
 
 function selecionaComando(comando) {
 
@@ -36,9 +37,9 @@ function selecionaComando(comando) {
         inventario.resetInventario()
     }
     
-    if(sorteios.getRandom() < 0.1) {
-        vida.tomaDano()
-        console.log('Você apanhou!')
+    if (sorteios.getRandom() < 0.1) {
+        combate.getCombate()
+        console.log('Você encontrou um zumbi!')
     }
 
 }

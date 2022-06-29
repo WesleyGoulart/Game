@@ -42,13 +42,11 @@ while (comando != '*') {
     
     comandos.selecionaComando(comando)
 
-    if (comando != '*'){
+    if (comando != '*' && comando != 'm'){
         status(true)
     }
-
        
 }
-
 
 if (comando == '*'){
     console.log('FIM!')
