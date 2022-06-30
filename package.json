@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "debug": "node --inspect=5858 game.js"
+    "debug": "node --inspect=5858 game.js",
+    "debugModulo": "node --inspect=5858 mapa.js"
   },
   "dependencies": {
     "prompt-sync": "^4.2.0"

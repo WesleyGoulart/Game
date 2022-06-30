@@ -14,6 +14,19 @@
        "debug"
       ],
       "port": 5858
+     },
+     {
+        "name": "Debugmodulo",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "npm",
+      "console": "integratedTerminal",
+      "runtimeArgs": [
+       "run",
+       "debugModulo"
+      ],
+      "port": 5858
      }
     ]
    }
