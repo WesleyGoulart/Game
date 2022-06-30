@@ -1,7 +1,9 @@
-const N = 5
-const M = 5
-let posicaoColuna = 2
-let posicaoLinha = 3
+const sorteios = require("./sorteios")
+
+const N = 20
+const M = 20
+let posicaoColuna = sorteios.randomIntFromInterval(0, M - 1)
+let posicaoLinha = sorteios.randomIntFromInterval(0, N - 1)
 
 
 
